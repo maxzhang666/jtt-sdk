@@ -1,0 +1,13 @@
+{
+    "name": "maxzhang/jtt-sdk",
+    "description": "京推推SDK",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Max zhang",
+            "email": "373884384@qq.com"
+        }
+    ],
+    "require": {}
+}
