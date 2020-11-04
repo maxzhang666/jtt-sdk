@@ -8,8 +8,16 @@ abstract class JttRequest
     protected $apiMethodName;
     protected $version;
 
+    /**
+     * 生成参数数组
+     * @return array
+     */
     abstract function generateParams();
 
+    /**
+     * 参数验证
+     * @return void
+     */
     abstract function check();
 
     /**
