@@ -17,6 +17,10 @@ class GoodsDetailRequest extends JttRequest
     protected $apiMethodName = 'get_ware_style';
     protected $version = 'v2';
 
+    /**
+     *  商品sku搜索，最高可输入100个，多sku搜索时请用英文逗号分割
+     * @var
+     */
     public $skuIds;
 
     /**
