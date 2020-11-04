@@ -25,8 +25,6 @@ $assertArray = [
 $client = new DefaultJttClient($assertArray['appid'], $assertArray['appkey']);
 
 $resp = $client->execute($req);
-$reqJson = $req->getReqJson();
-print_r("请求报文:\n" . $reqJson);
 print_r("\n返回响应报文:\n" . $resp);
 
 ```
