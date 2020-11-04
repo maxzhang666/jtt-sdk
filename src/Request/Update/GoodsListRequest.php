@@ -6,6 +6,11 @@ namespace MaxZhang\JttSdk\Request\Update;
 
 use MaxZhang\JttSdk\JttRequest;
 
+/**
+ * 商品列表
+ * Class GoodsListRequest
+ * @package MaxZhang\JttSdk\Request\Update
+ */
 class GoodsListRequest extends JttRequest
 {
     protected $apiMethodName = 'get_goods_list';
