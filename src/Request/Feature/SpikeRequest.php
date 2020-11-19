@@ -6,6 +6,11 @@ namespace MaxZhang\JttSdk\Request\Feature;
 
 use MaxZhang\JttSdk\JttRequest;
 
+/**
+ * 京东秒杀
+ * Class SpikeRequest
+ * @package MaxZhang\JttSdk\Request\Feature
+ */
 class SpikeRequest extends JttRequest
 {
     protected $apiMethodName = 'sekill';

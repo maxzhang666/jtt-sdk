@@ -1,7 +1,7 @@
 <?php
 
 
-namespace MaxZhang\JttSdk\Request\Feature;
+namespace MaxZhang\JttSdk\Request\Basic;
 
 
 use MaxZhang\JttSdk\Exceptions\InvalidArgumentException;
