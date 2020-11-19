@@ -37,7 +37,15 @@ class PinGouRequest extends JttRequest
      */
     public $goodsSecondType;
     /**
-     * 排序字段： finally券后价；brokerage佣金比例；sale折扣力度；OrderCount30Days 30天引入订单量；inOrderComm30Days 30天支出佣金；getCouponNum领券量；comments评论数；goodComments好评数
+     * 排序字段：
+     * finally券后价；
+     * brokerage佣金比例；
+     * sale折扣力度；
+     * OrderCount30Days 30天引入订单量；
+     * inOrderComm30Days 30天支出佣金；
+     * getCouponNum领券量；
+     * comments评论数；
+     * goodComments好评数
      * @var string
      */
     public $sortName;
