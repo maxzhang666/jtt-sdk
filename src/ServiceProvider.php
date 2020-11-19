@@ -10,19 +10,18 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
 
     public function register()
     {
-        $this->app->singleton(DefaultDataokeClient::class, function () {
-            return new DefaultDataokeClient(
-                config('services.dataokeSdk.serverUrl'),
-                config('services.dataokeSdk.appKey'),
-                config('services.dataokeSdk.appSecret')
+        $this->app->singleton(DefaultJttClient::class, function () {
+            return new DefaultJttClient(
+                config('services.jttSdk.appKey'),
+                config('services.jttSdk.appSecret')
             );
         });
 
-        $this->app->alias(DefaultDataokeClient::class, 'dataokeSdk');
+        $this->app->alias(DefaultJttClient::class, 'jttSdk');
     }
 
     public function provides()
     {
-        return [DefaultDataokeClient::class, 'dataokeSdk'];
+        return [DefaultJttClient::class, 'jttSdk'];
     }
 }
