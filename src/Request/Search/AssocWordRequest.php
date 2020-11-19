@@ -8,6 +8,7 @@ use MaxZhang\JttSdk\Exceptions\InvalidArgumentException;
 use MaxZhang\JttSdk\JttRequest;
 
 /**
+ * 联想词
  * Class AssocWordRequest
  * @package MaxZhang\JttSdk\Request\Search
  */
