@@ -1,12 +1,17 @@
 <?php
 
 
-namespace MaxZhang\JttSdk\Request\Feature;
+namespace MaxZhang\JttSdk\Request\Basic;
 
 
 use MaxZhang\JttSdk\Exceptions\InvalidArgumentException;
 use MaxZhang\JttSdk\JttRequest;
 
+/**
+ * 相似商品推荐
+ * Class RelatedGoodsRequest
+ * @package MaxZhang\JttSdk\Request\Feature
+ */
 class RelatedGoodsRequest extends JttRequest
 {
 
