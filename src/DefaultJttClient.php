@@ -53,10 +53,13 @@ class DefaultJttClient
         }
         $paramsArray = $request->getApiParams();
         if (empty($paramsArray)) {
-            $paramsArray = "";
+            $paramsArray = [];
         }
-        $paramsArray['appid']  = $this->appId;
-        $paramsArray['appkey'] = $this->appKey;
+
+        $paramsArray = array_merge($paramsArray, [
+            'appid'  => $this->appId,
+            'appkey' => $this->appKey
+        ]);
 
         try {
             $resp = self::curl($this->serverUrl . '/' . $request->getApiMethodName() . '?' . http_build_query($paramsArray));
