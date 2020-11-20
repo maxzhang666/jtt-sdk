@@ -16,12 +16,11 @@
   },
   "autoload": {
     "psr-4": {
-      "MaxZhang\\JttSdk\\": "src"
+      "MaxZhang\\JttSdk\\": "./src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-
     }
   },
   "extra": {
