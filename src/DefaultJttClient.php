@@ -64,7 +64,7 @@ class DefaultJttClient
         try {
             $resp = self::curl($this->serverUrl . '/' . $request->getApiMethodName() . '?' . http_build_query($paramsArray));
             $obj  = json_decode($resp, true);
-            return json_last_error_msg() ? $resp : $obj;
+            return json_last_error() ? $resp : $obj;
         } catch (Exception $e) {
             throw  new HttpException($e->getMessage(), $e->getCode());
         }
