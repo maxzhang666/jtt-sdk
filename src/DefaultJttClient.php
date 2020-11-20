@@ -43,8 +43,8 @@ class DefaultJttClient
         if (empty($this->serverUrl)) {
             throw new InvalidArgumentException("serverUrl can not empty ！");
         }
-        if (empty($this->appSecret)) {
-            throw new InvalidArgumentException("appSecret can not empty ！");
+        if (empty($this->appId)) {
+            throw new InvalidArgumentException("appId can not empty ！");
         }
         try {
             $request->check();
