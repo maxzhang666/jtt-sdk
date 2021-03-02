@@ -27,7 +27,7 @@ class AssocWordRequest extends JttRequest
      * 生成参数数组
      * @return array
      */
-    function generateParams()
+    function generateParams():array
     {
         return ['word' => $this->word];
     }

@@ -65,7 +65,7 @@ class GoodsListRequest extends JttRequest
      */
     public $rand;
 
-    function generateParams()
+    function generateParams():array
     {
         return [
             'page'              => $this->page,

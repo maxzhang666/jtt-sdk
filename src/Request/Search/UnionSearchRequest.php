@@ -154,7 +154,7 @@ class UnionSearchRequest extends JttRequest
      * 生成参数数组
      * @return mixed
      */
-    function generateParams()
+    function generateParams():array
     {
         return [
             'cid1'                 => $this->cid1,

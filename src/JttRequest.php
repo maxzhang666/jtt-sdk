@@ -12,7 +12,7 @@ abstract class JttRequest
      * 生成参数数组
      * @return array
      */
-    abstract function generateParams();
+    abstract function generateParams(): array;
 
     /**
      * 参数验证
@@ -23,7 +23,7 @@ abstract class JttRequest
     /**
      * 获取请求数据
      */
-    public function getApiParams()
+    public function getApiParams(): array
     {
         $this->apiParams = $this->generateParams();
         //版本号默认不传

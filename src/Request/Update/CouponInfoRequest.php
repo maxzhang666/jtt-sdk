@@ -28,7 +28,7 @@ class CouponInfoRequest extends JttRequest
      */
     private $skuIds;
 
-    function generateParams()
+    function generateParams():array
     {
         return [
             '$skuIds' => $this->skuIds

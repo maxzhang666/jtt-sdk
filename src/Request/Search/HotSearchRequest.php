@@ -21,7 +21,7 @@ class HotSearchRequest extends JttRequest
      * 生成参数数组
      * @return array
      */
-    function generateParams()
+    function generateParams():array
     {
         return [];
     }

@@ -15,74 +15,76 @@ class NineRequest extends JttRequest
 {
 
     protected $apiMethodName = 'get_price_9_9';
+    protected $version = 'v2';
+//pageIndex Int 	否 	1
+//pageSize Int 	否 	50
+//keyword String 	否 	纸巾 	关键词搜索（可以输入关键词、SKU、商品链接、店铺名称）
 
 
     /**
-     * 分页获取数据 默认1 最多获取到50页
-     * @var int
+     * @var int 分页获取数据（默认第1页）
      */
-    public $page = 1;
+    public $pageIndex = 1;
     /**
-     * 单页面显示条数(最大100条最少10条)
-     * @var integer
+     * @var integer 单页面显示条数(最大100条最少10条)
      */
-    public $num = 10;
+    public $pageSize = 10;
     /**
      * 商品搜索：商品名称/商品SKU
      * @var string
      */
-    public $so;
+    public $keyword;
     /**
-     * 品牌ID筛选
-     * @var string
+     * @var  int 京推推商品一级类目： 1居家日用；2食品；3生鲜；4图书；5美妆个护；6母婴；7数码家电；8内衣；9配饰；10女装；11男装；12鞋品；13家装家纺；14文娱车品；15箱包；16户外运动（支持多类目筛选，如1,2获取类目为居家日用、食品的所有商品，请用英文都好隔开，不传则为全部商品）
      */
-    public $brandId;
+    public $goodsType;
     /**
-     * 京推推商品一级类目：1居家日用；2食品；3生鲜；4图书；5美妆个护；6母婴；7数码家电；8内衣；9配饰；10女装；11男装；12鞋品；13家装家纺；14文娱车品；15箱包；16户外运动（支持多类目筛选，如1, 2获取类目为女装、男装的商品，逗号仅限英文逗号（不传则为全部商品）
-     * @var string
-     */
-    public $goodsNewType;
-    /**
-     * 京推推二级分类
-     * @var integer
+     * @var int 京推推二级分类（可通过超级分类API获取全部的二级分类id，本接口也有返回）
      */
     public $goodsSecondType;
     /**
-     * 商品分类：(弃用) 1.女装 2.男装 3.内衣配饰 4.母婴玩具 5.美妆个护 6.食品保健 7.居家生活 8.鞋品箱包 9.运动户外 10.文体车品 11.数码家电
-     * @var integer
+     * @var string OrderCount30Days    排序字段： finally券后价；brokerage佣金比例；sale折扣力度；OrderCount30Days 30天引入订单量；inOrderComm30Days 30天支出佣金；getCouponNum领券量；comments评论数；goodComments好评数
      */
-    public $type;
+    public $sortName;
     /**
-     * 商品筛选：
-     * collage-京东拼购;
-     * self-京东自营;
-     * sift-精选好货;
-     * wtype-京东配送产品;
-     * finally-券后价最低;
-     * finally_desc-券后价最高;
-     * brokerage-佣金比例最高;
-     * brokerage_asc-佣金比例最低;
-     * sale-优惠最多;
-     * sale_asc-优惠最少;
-     * @var string
+     * @var string 排序： asc升序, desc降序
      */
-    public $rank;
+    public $sort;
+    /**
+     * @var double 价格筛选:最低价格
+     */
+    public $priceStart;
+    /**
+     * @var double 价格筛选:最高价格
+     */
+    public $priceEnd;
+    /**
+     * @var int 京推推品牌ID筛选
+     */
+    public $brandId;
+    /**
+     * @var int 店铺id筛选
+     */
+    public $shopId;
 
     /**
      * 生成参数数组
      * @return array
      */
-    function generateParams()
+    function generateParams(): array
     {
         return [
-            'page'              => $this->page,
-            'num'               => $this->num,
-            'so'                => $this->so,
-            'brand_id'          => $this->brandId,
-            'goods_new_type'    => $this->goodsNewType,
+            'pageIndex'         => $this->pageIndex,
+            'pageSize'          => $this->pageSize,
+            'keyword'           => $this->keyword,
+            'goods_type'        => $this->goodsType,
             'goods_second_type' => $this->goodsSecondType,
-            'type'              => $this->type,
-            'rank'              => $this->rank
+            'sortName'          => $this->sortName,
+            'sort'              => $this->sort,
+            'price_start'       => $this->priceStart,
+            'price_end'         => $this->priceEnd,
+            'brand_id'          => $this->brandId,
+            'shop_id'           => $this->shopId
         ];
     }
 
