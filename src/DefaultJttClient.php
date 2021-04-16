@@ -18,8 +18,8 @@ class DefaultJttClient
      * 构造方法.
      *
      * @param string|null $appId 应用访问Id
-     * @param string $appKey 应用访问key
-     * @param string $serverUrl 服务调用地址
+     * @param string      $appKey 应用访问key
+     * @param string      $serverUrl 服务调用地址
      */
     public function __construct(string $appId = null, string $appKey = null, string $serverUrl = "http://japi.jingtuitui.com/api")
     {
@@ -30,7 +30,7 @@ class DefaultJttClient
 
     /**
      * @param JttRequest $request
-     * @return bool|string
+     * @return bool|string|array
      * @throws HttpException
      * @throws InvalidArgumentException
      */
@@ -72,9 +72,9 @@ class DefaultJttClient
     }
 
     /**
-     * @param $url
+     * @param          $url
      * @param jsno|xml $postFields
-     * @param array $header
+     * @param array    $header
      * @return bool|string
      * @throws HttpException
      */
