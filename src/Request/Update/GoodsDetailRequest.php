@@ -18,8 +18,8 @@ class GoodsDetailRequest extends JttRequest
     protected $version = 'v2';
 
     /**
-     *  商品sku搜索，最高可输入100个，多sku搜索时请用英文逗号分割
-     * @var
+     *
+     * @var string 商品sku搜索，最高可输入100个，多sku搜索时请用英文逗号分割
      */
     public $skuIds;
 
@@ -27,7 +27,7 @@ class GoodsDetailRequest extends JttRequest
      * 生成参数数组
      * @return array
      */
-    function generateParams():array
+    function generateParams(): array
     {
         return [
             'skuIds' => $this->skuIds
